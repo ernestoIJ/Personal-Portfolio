@@ -1,0 +1,129 @@
+.project-card {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   border: 1px solid rgba(0, 0, 0, 0.125);
+   border-radius: 0.25rem;
+   width: 100%;
+   /* Adjust width as needed */
+   background-color: #e9eef3;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+   transition: transform 0.2s;
+      /* Smooth transition for hover effect */
+   margin-bottom: 20px;
+}
+
+.dark .project-card {
+   background: #242423;
+}
+
+.project-card:hover {
+   transform: translateY(-5px);
+   background: -webkit-linear-gradient(0deg, rgba(131, 58, 180, 1) 0%, rgba(29, 73, 253, 1) 50%, rgba(3, 119, 252, 1) 100%);
+   color: white;
+
+   .card-text {
+      color: white;
+   }
+}
+
+.card-image img {
+   width: 100%;
+   height: 180px;
+   /* Adjust height as needed */
+   object-fit: cover;
+}
+
+.card-body {
+   padding: 1rem;
+   flex: 1;
+}
+
+.projects-section {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(0, 1fr));
+   /* Adjust minmax for your card width */
+   gap: 20px;
+   /* Adjust the gap size as needed */
+   padding: 20px;
+   /* Adjust padding as needed */
+   justify-items: center;
+}
+
+.card-title {
+   margin-bottom: 0.75rem;
+   font-size: 1.25rem;
+}
+
+.card-text {
+   margin-bottom: 1.25rem;
+   font-size: 1rem;
+   color: #6c757d;
+   /* Bootstrap's text-muted color */
+}
+
+.dark .card-text {
+   color: #aeafb0;
+}
+
+.card-button {
+   padding: 0.375rem 0.75rem;
+   font-size: 1rem;
+   border-radius: 0.25rem;
+   color: #fff;
+   background-color: #0377fc;
+   /* Bootstrap's blue color */
+   border: none;
+   cursor: pointer;
+   margin-right: 1rem;
+   transition: background-color 0.15s ease-in-out;
+}
+
+.card-button a {
+   text-decoration: none;
+   color: #fff;
+}
+
+.card-button:hover {
+   background-color: #0056b3;
+   /* Darken the button on hover */
+}
+
+.sort-dropdown {
+   padding: 0.5rem 1rem;
+   border-radius: 30px;
+   border: 1px solid transparent;
+   font-weight: bold;
+   margin: 1rem 1rem;
+   background: -webkit-linear-gradient(0deg, rgba(131, 58, 180, 1) 0%, rgba(29, 73, 253, 1) 50%, rgba(3, 119, 252, 1) 100%);
+   color: white;
+   /* Spacing between the dropdown and the project cards */
+}
+
+@media screen and (max-width: 1234px) {
+   .projects-section{
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media (max-width: 927px) {
+   .projects-section {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+}
+
+/* Small screens (phones): 1 card in a row */
+@media (max-width: 619px) {
+   .projects-section {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media (max-width: 300px) {
+   .project-card {
+      width: 100%;
+      /* Make the card take full width */
+      /* Adjust any other properties such as padding or font-size as needed */
+   }
+}

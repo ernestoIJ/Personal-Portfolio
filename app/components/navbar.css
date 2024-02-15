@@ -1,0 +1,137 @@
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   /* align-items: center; */
+   padding: 1rem;
+   background-color: white;
+   font-size: 1rem;
+   max-width: 100%;
+}
+
+.nav-left {
+   display: flex;
+   flex-wrap: wrap;
+   /* other styles */
+}
+
+.logo {
+   margin-right: 1rem;
+   text-decoration: none;
+   padding: 0.5rem 1rem;
+   border-radius: 30px;
+   background: -webkit-linear-gradient(0deg, rgba(131, 58, 180, 1) 0%, rgba(29, 73, 253, 1) 50%, rgba(3, 119, 252, 1) 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-weight: bold;
+}
+
+.nav-link {
+   margin-right: 1rem;
+   text-decoration: none;
+   padding: 0.5rem 1rem;
+   border-radius: 30px;
+   color: black;
+   font-weight: bold;
+}
+
+.nav-link:hover {
+   background-color: #d9d9d7;
+}
+
+.theme-toggle {
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   border: none;
+   border-radius: 30px;
+   padding: 4px 8px;
+   color: black;
+   background-color: white;
+   cursor: pointer;
+}
+
+.theme-toggle:hover {
+   background-color: #d9d9d7;
+}
+
+.navbar,
+.nav-link,
+.theme-toggle {
+   transition: background-color 0.3s ease, color 0.3s ease;
+   /* ... other styles ... */
+}
+
+.dark .navbar {
+   background-color: black;
+   color: white;
+}
+
+.dark .nav-link {
+   /* Styles for nav links in dark mode */
+   color: white;
+}
+
+.dark .nav-link:hover {
+   background-color: #1c1c1b;
+}
+
+.dark .theme-toggle {
+   background-color: black;
+   color: white;
+}
+
+.dark .theme-toggle:hover {
+   background-color: #1c1c1b;
+}
+
+.hamburger-icon {
+   display: none;
+   cursor: pointer;
+   border-radius: 30px;
+}
+
+.hamburger-icon:hover {
+   background-color: #d9d9d7;
+}
+
+.dark .hamburger-icon:hover {
+   background-color: #1c1c1b;
+}
+
+.navbar-expanded {
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.theme-toggle,
+.hamburger-icon {
+   margin-left: 0.5rem;
+   /* Add space between icons */
+}
+
+.sun-moon-container {
+   display: flex;
+}
+
+@media screen and (max-width: 781px) {
+
+   .nav-link{
+      display: none;
+   }
+
+   .nav-left.expanded .nav-link,
+   .nav-left.expanded .logo {
+      display: block;
+      /* Show the links when expanded */
+      width: 100%;
+      padding: 0.5rem;
+      /* Add padding for touch targets */
+   }
+
+   /* Adjustments for the hamburger icon */
+   .hamburger-icon {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+   }
+}

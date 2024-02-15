@@ -1,0 +1,40 @@
+.contact-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 50px;
+}
+
+.connect-w-me,
+.email-me {
+   margin: 20px;
+   padding: 10px;
+   border: 1px solid rgba(29, 73, 253, 1);
+   border-radius: 5px;
+   text-align: center;
+}
+
+.connect-w-me a,
+.email-me a {
+   display: block;
+   text-decoration: none;
+   padding: 0.5rem 1rem;
+   border-radius: 30px;
+   background: -webkit-linear-gradient(0deg, rgba(131, 58, 180, 1) 0%, rgba(29, 73, 253, 1) 50%, rgba(3, 119, 252, 1) 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-weight: bold;
+}
+
+.connect-w-me img,
+.email-me img {
+   max-width: 50px;
+   margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+   .contact-container {
+      flex-direction: column;
+   }
+}

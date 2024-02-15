@@ -1,0 +1,45 @@
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+    width: 75%;
+    height: 2.5rem; 
+    border-top: 1px solid #242423; 
+    position: relative; 
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-container {
+   display: flex;
+   margin-top: 5rem;
+}
+
+.icon-container {
+   border: 1px solid #242423;
+   height: 2rem;
+   border-radius: 50%;
+   margin: 3rem 1rem;
+   padding: 0.5rem 0.5rem;
+}
+
+.icon-container {
+   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+.dark .icon-container {
+   border-color: white;
+   filter: none;
+}
+
+.dark #footer {
+   border-color: white;
+}
+
+@media screen and (max-width: 280px) {
+   .icon {
+      margin: 5rem 0.5rem;
+   }
+}
