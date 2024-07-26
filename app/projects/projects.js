@@ -1,31 +1,11 @@
 export const projects = [
       {
          id: 1,
-         title: "News Flash Summarizer",
-         description: "A web application that uses facebook/bart-large-cnn AI model to generate concise summaries of news articles from URLs.",
-         tech: "Javascript, HTML/CSS, React.js, Node.js, Hugging Face API",
-         imgUrl: "/project_pics/news_summarizer_image.png",
-         website: "https://newsflashsummarizer.firebaseapp.com/",
-         git: "https://github.com/ernestoIJ/NewsFlashSummary/tree/main",
-         date: "2023-12-15",
-      },
-      {
-         id: 2,
-         title: "ArtificialGallery",
-         description: "ArtificialGallery is a web platform where users creatively interact with DALL-E AI to generate and share unique digital art.",
-         tech: "MongoDB, Express.js, React.js, Node.js, Tailwind CSS, OpenAI's DALL-E, Clerk",
-         imgUrl: "/project_pics/ag_image.png",
-         website: "https://artificialgallery.tech/",
-         git: "https://github.com/ernestoIJ/artificialgallery",
-         date: "2023-12-22",
-      },
-      {
-         id: 3,
-         title: "Machine Failure Detection",
-         description: "Predictive maintenance system that leverages IoT sensor data, analyzed through a sophisticated Python-based SQL pipeline, to detect early signs of machine failure. Utilizing machine learning algorithms with Scikit-learn and data management with SQLite3, this project ensures minimal downtime by offering timely insights into machinery health.",
-         tech: "Python, Jupyter Notebook, Sqlite3, Scikit-learn, Pandas, NumPy, Matplotlib",
-         imgUrl: "/project_pics/machinefailure_image.png",
-         git: "https://github.com/ernestoIJ/Machine-Failure-Detection",
-         date: "2024-02-13",
-      },
+         title: "Distributed Model Training",
+         description: "Developed a Distributed Data Parallel (DDP) model to facilitate efficient training of deep learning models across multiple computational nodes, significantly reducing training time.",
+         tech: "Python, PyTorch, Flask, HTML, JavaScript",
+         imgUrl: "/project_pics/distributed_sys.png",
+         git: "https://github.com/ernestoIJ/distributed-AI-training",
+         date: "2024-07-25",
+      }
    ];

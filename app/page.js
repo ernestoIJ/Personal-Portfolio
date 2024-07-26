@@ -8,7 +8,7 @@ import { useState, useEffect} from "react";
 
 export default function Home() {
 
-   const jobTitles = ["Front-end Developer", "Full Stack Developer", "Web Developer","Software Engineer", "Machine Learning Engineer"];
+   const jobTitles = ["Full Stack Developer", "Software Engineer", "Machine Learning Engineer", "Research Engineer", "Backend Engineer"];
    
    const [currentTitle, setCurrentTitle] = useState("");
    const [isDeleting, setIsDeleting] = useState(false);
@@ -55,7 +55,7 @@ export default function Home() {
     <div id="home-page">
       <section className="banner-container section-container" id="home">
          <div className="section__pic-container">
-            <Image priority src="/jr.png" alt="profile picture" width={300} height={300}/>
+            <Image priority src="/linkedIn_profile.png" alt="profile picture" width={300} height={300}/>
          </div>
          <div className="section__text">
             <p className="section__text__p1">Hello, I'm</p>
