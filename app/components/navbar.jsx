@@ -15,6 +15,7 @@ export default function Navbar({ theme, toggleTheme }) {
             <div className={`nav-left ${isNavExpanded ? 'expanded' : ''}`}>
                 <Link className="logo" href="/">Ernesto Ibanez Jr.</Link>
                 <Link className="nav-link" href="/experience">Experience</Link>
+                <Link className="nav-link" href="/education">Education</Link>
                 <Link className="nav-link" href="/projects">Projects</Link>
                 <Link className="nav-link" href="/skills">Skills</Link>
                 <Link className="nav-link" href="/blogs">Blogs</Link>

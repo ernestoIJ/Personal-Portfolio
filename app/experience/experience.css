@@ -1,15 +1,214 @@
 .experience-container {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
    padding: 50px;
 }
 
-.experience {
-   margin: 20px;
-   padding: 10px;
-   border: 1px solid rgba(29, 73, 253, 1);
-   border-radius: 5px;
+.experience-container h1 {
    text-align: center;
+   margin-bottom: 50px;
+}
+
+/* Timeline container */
+.timeline {
+   position: relative;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+/* Vertical line */
+.timeline::after {
+   content: "";
+   position: absolute;
+   width: 6px;
+   background-color: rgba(29, 73, 253, 1);
+   top: 0;
+   bottom: 0;
+   left: 50%;
+   margin-left: -3px;
+}
+
+/* Timeline items */
+.timeline-item {
+   padding: 20px 40px;
+   position: relative;
+   width: 50%;
+   box-sizing: border-box;
+}
+
+/* Left and right positioning */
+.timeline-item.left {
+   left: 0;
+}
+
+.timeline-item.right {
+   left: 50%;
+}
+
+/* Content inside timeline items */
+.timeline-item .content {
+   padding: 20px 30px;
+   background-color: #e9eef3;
+   position: relative;
+   border-radius: 6px;
+   box-shadow: 0 0.5rem 1rem -0.25rem #000;
+   transition: transform 0.2s;
+}
+
+.dark .timeline-item .content {
+   background-color: #242423;
+   box-shadow: 0 0.5rem 1rem -0.25rem white;
+   }
+
+   .timeline-item .content:hover {
+   transform: translateY(-5px);
+   background: linear-gradient(
+      0deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(29, 73, 253, 1) 50%,
+      rgba(3, 119, 252, 1) 100%
+   );
+   color: white;
+}
+
+.timeline-item .content:hover .experience-responsibilities li,
+.timeline-item .content:hover .experience-tech,
+.timeline-item .content:hover .experience-dates {
+   color: white;
+}
+
+/* Company logo */
+.company-logo {
+   width: 100px;
+   height: auto;
+   margin-bottom: 10px;
+}
+
+/* Position titles */
+.experience-position {
+   font-size: 1.5rem;
+   margin-bottom: 0.5rem;
+}
+
+.experience-company {
+   font-size: 1.25rem;
+   margin-bottom: 0.5rem;
+}
+
+.experience-dates {
+   font-size: 1rem;
+   color: #6c757d;
+   margin-bottom: 1rem;
+}
+
+.dark .experience-dates {
+   color: #aeafb0;
+}
+
+.experience-responsibilities {
+   margin-bottom: 1rem;
+}
+
+.experience-responsibilities li {
+   margin-bottom: 0.5rem;
+}
+
+.experience-tech {
+   font-size: 1rem;
+   color: #6c757d;
+}
+
+.dark .experience-tech {
+   color: #aeafb0;
+}
+
+/* Circles on the timeline */
+.timeline-item::before {
+   content: "";
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 100%;
+   transform: translateX(-50%);
+   background-color: rgba(29, 73, 253, 1);
+   border: 4px solid #fff;
+   top: 20px;
+   border-radius: 50%;
+   z-index: 1;
+}
+
+.timeline-item.right::before {
+   content: "";
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   left: 0%;
+   transform: translateX(-50%);
+   background-color: rgba(29, 73, 253, 1);
+   border: 4px solid #fff;
+   top: 20px;
+   border-radius: 50%;
+   z-index: 1;
+}
+
+/* Ensure text wraps and doesn't overflow */
+.timeline-item .content h2,
+.timeline-item .content h3,
+.timeline-item .content p,
+.timeline-item .content ul {
+   word-wrap: break-word;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+   /* Hide the vertical line */
+   .timeline::after {
+      display: none;
+   }
+
+   /* Timeline items full width */
+   .timeline-item {
+      width: 100%;
+      padding: 10px 0;
+      left: 0 !important;
+   }
+
+   /* Remove left/right positioning */
+   .timeline-item.left,
+   .timeline-item.right {
+      left: 0;
+   }
+
+   /* Adjust content */
+   .timeline-item .content {
+      padding: 15px 20px;
+      margin: 0 auto;
+      width: calc(100% - 40px);
+   }
+
+   /* Hide the circles */
+   .timeline-item::before {
+      display: none;
+   }
+
+   /* Adjust font sizes */
+   .experience-position {
+      font-size: 1.25rem;
+   }
+
+   .experience-company {
+      font-size: 1.1rem;
+   }
+
+   .experience-dates,
+   .experience-tech {
+      font-size: 0.9rem;
+   }
+
+   /* Adjust company logo size */
+   .company-logo {
+      width: 80px;
+   }
+
+   .experience-responsibilities li {
+      font-size: 0.9rem; /* Decrease font size for better fit */
+   }
 }
