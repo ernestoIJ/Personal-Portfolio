@@ -21,6 +21,8 @@ export default function Education() {
               />
               <h2 className="experience-position">{ed.school}</h2>
               <h3 className="experience-company">{ed.degree}</h3>
+              <h4 className="experience-company">{ed.gpa}</h4>
+              <h5 className="experience-dates">{ed.RCW}</h5>
               <p className="experience-dates">
                 {ed.startDate} - {ed.endDate}
               </p>

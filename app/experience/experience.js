@@ -5,7 +5,7 @@ export const experiences = [
         company: "Rubitection",
         companyLogo: "/company_logos/Rubitection_Logo.png", 
         startDate: "Sep 2024",
-        endDate: "Present",
+        endDate: "Dec 2024",
         responsibilities: [
         "Developed a Selenium-based web scraping tool, expanding the companies dataset by 2x for future machine learning applications.",
         "Designed and implemented a high-accuracy image classification model using PyTorch and transfer learning, achieving 95.83% accuracy, 94.03% precision, recall, and F1-scores to effectively distinguish between clean and invalid images.",
